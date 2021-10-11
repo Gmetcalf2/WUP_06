@@ -53,10 +53,22 @@ basicCC <- ggplot(dd2,aes(x=RACE,y=prcnt*100,fill=CAPPUN))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
+This graph shows that white and other races intend favor capital punishment, where else black opposes capital punishment.
 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+table2 <- xtabs(~RACE + CAPPUN, data=GSS)
+rowPerc(table2)
+colPerc(table2)
+```
+
+It shows that more than 65% of white and other races favor Capital punishment, however 65% of the black race opposes it.
+
+It appears that there is a correlation between attitude towards capital punishment and race.
+
 
 ## Inferential Results
 
