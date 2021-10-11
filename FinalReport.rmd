@@ -20,11 +20,13 @@ Is attitude toward capitol punishment (CAPPUN) independent of race (RACE)?
 If not, then whose view differs from whom??
 
 $H_0: Ones attitude towards capital punishemnt is independant race.  
-$H_A: Ones attiude towards capital punishment is depends of race.  
+$H_A: Ones attitude towards capital punishment is depends of race.  
 
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
+
+The data in this study is attitude towards capital punishment and the race of an individual. Both these variables are categorical.
 
 # Results
 
@@ -35,6 +37,22 @@ $H_A: Ones attiude towards capital punishment is depends of race.
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
+
+```{r}
+dd2 <- GSS %>% group_by(RACE,CAPPUN) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+# the group_by followed by summarize(count=n())
+
+basicC <- ggplot(dd2,aes(x=RACE,y=count,fill=CAPPUN))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=RACE,y=prcnt*100,fill=CAPPUN)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
 
 ### Numerical Descriptive Results
 
