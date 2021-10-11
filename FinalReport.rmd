@@ -19,6 +19,9 @@ GSS <-read.csv(file="GSScsv.csv",header=TRUE)
 Is attitude toward capitol punishment (CAPPUN) independent of race (RACE)?
 If not, then whose view differs from whom??
 
+$H_0: Ones attitude towards capital punishemnt is independant race.  
+$H_A: Ones attiude towards capital punishment is depends of race.  
+
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
