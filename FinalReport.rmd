@@ -150,8 +150,13 @@ fisherXY = function(x, y, confL = 0, printAll=FALSE){
 fisherXY(GSS$CAPPUN,GSS$RACE,printAll = T)
 ```
 
-
+The P value of 0.2751 that there is very little difference between other races and whites, as both favor capital punishment. 
+The value of 0.001598 suggests that race and attitude towards capital punishment is related therefore we reject the null hypothesis.  
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+In conclusion there is not enough evidence of difference towards attitudes of capital punishment and race of an individual making us reject the null hypothesis. 
+
+
